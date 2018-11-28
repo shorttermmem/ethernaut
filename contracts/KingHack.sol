@@ -12,10 +12,10 @@ contract KingHack {
     address public mywallet;
     event log(uint256 indexed val);
     
-    constructor(address _inst, address _mywallet) public {
+    constructor(address _inst) public {
         level = _inst;
         King(level).send(1);
-        mywallet = _mywallet;
+        mywallet = msg.sender;
     }
     
     function () payable {
