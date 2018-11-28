@@ -1,0 +1,25 @@
+{
+  "name": "ethernaut",
+  "version": "1.0.0",
+  "description": "This is a repo that provides sample solutions for all ethernaut hacks.",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "turffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shorttermmem/ethernaut.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shorttermmem/ethernaut/issues"
+  },
+  "homepage": "https://github.com/shorttermmem/ethernaut#readme",
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.6"
+  }
+}
