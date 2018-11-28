@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/shorttermmem/ethernaut#readme",
   "dependencies": {
+    "truffle": "^4.1.14",
     "truffle-hdwallet-provider": "0.0.6"
   }
 }
