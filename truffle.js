@@ -24,7 +24,7 @@ module.exports = {
   networks: {
     development: {
       host: "localhost",
-      port: 7545,
+      port: 9545,     // debugger expects to be on port 9545
       network_id: "*" // Match any network id
     },
     ganache: {
