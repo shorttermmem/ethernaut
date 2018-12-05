@@ -1,6 +1,3 @@
-"use strict";
-// import {assert} from "chai";
-
 var Shop = artifacts.require("Shop");
 var ShopHack = artifacts.require("ShopHack");
 
@@ -10,7 +7,7 @@ contract("Shop", () => {
 
         let price = await shop.price.call();
         let isSold = await shop.isSold.call();
-        expect(price.toString()).to.equal("100");   // price is a BigNumber
+        expect(price.toNumber()).to.equal(100);   // price is a BigNumber
         expect(isSold).to.equal(false);
     });
 
