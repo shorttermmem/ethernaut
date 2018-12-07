@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/shorttermmem/ethernaut.svg?branch=master)](https://travis-ci.org/shorttermmem/ethernaut)
+
 # ethernaut
 - Sample solutions and automated tests for all ethernaut levels using the truffle framework (https://truffleframework.com/). 
 - Ethernaut is a Capture the Flag (CTF) type competition where you must hack victim solidity contracts provided by (https://ethernaut.zeppelin.solutions/).
