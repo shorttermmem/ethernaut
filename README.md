@@ -13,7 +13,7 @@
 - [ ] 6. Delegation
 - [ ] 7. Force
 - [ ] 8. Vault
-- [ ] 9. King
+- [x] 9. King
 - [ ] 10. Re-entrancy
 - [ ] 11. Elevator
 - [x] 12. Privacy
