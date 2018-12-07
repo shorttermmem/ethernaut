@@ -22,7 +22,7 @@ before_install:
   - npm install -g ganache-cli truffle
 
 install:
- # - npm install 
+  - npm install 
 
 script:
   - ganache-cli &
