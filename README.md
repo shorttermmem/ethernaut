@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/shorttermmem/ethernaut.svg?branch=master)](https://travis-ci.org/shorttermmem/ethernaut)
+[![Build status](https://ci.appveyor.com/api/projects/status/el8km2bitpexanl0?svg=true)](https://ci.appveyor.com/project/shorttermmem/ethernaut)
 
 # ethernaut
 - Sample solutions and automated tests for all ethernaut levels using the truffle framework (https://truffleframework.com/). 
