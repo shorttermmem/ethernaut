@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/shorttermmem/ethernaut.svg?branch=master)](https://travis-ci.org/shorttermmem/ethernaut)
+[![Build status](https://ci.appveyor.com/api/projects/status/el8km2bitpexanl0?svg=true)](https://ci.appveyor.com/project/shorttermmem/ethernaut)
+[![codecov](https://codecov.io/gh/shorttermmem/ethernaut/branch/master/graph/badge.svg)](https://codecov.io/gh/shorttermmem/ethernaut)
+
 # ethernaut
 - Sample solutions and automated tests for all ethernaut levels using the truffle framework (https://truffleframework.com/). 
 - Ethernaut is a Capture the Flag (CTF) type competition where you must hack victim solidity contracts provided by (https://ethernaut.zeppelin.solutions/).
@@ -11,7 +15,7 @@
 - [ ] 6. Delegation
 - [ ] 7. Force
 - [ ] 8. Vault
-- [ ] 9. King
+- [x] 9. King
 - [ ] 10. Re-entrancy
 - [ ] 11. Elevator
 - [x] 12. Privacy
