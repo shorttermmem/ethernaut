@@ -1,4 +1,6 @@
 //https://truffleframework.com/docs/truffle/reference/configuration
+require('dotenv').config();
+
 let HDWalletProvider = require("truffle-hdwallet-provider");
 
 module.exports = {
@@ -24,7 +26,7 @@ module.exports = {
     ropsten:  {
       provider: function() {
         return new HDWalletProvider(
-          'club vocal bronze hair vocal card remember seek web half lobster outside', 
+          process.env.WALLET_KEY, 
           "https://ropsten.infura.io/db29611c34844e2197634a44dbac1344")
       },
       network_id: 3,
