@@ -25,7 +25,8 @@ contract('King', async (accounts) => {
         kingfactory = await KingFactory.new()
         kinghack = await KingHack.new() 
      
-        king = await utils.createLevelInstance(kingfactory, owner, King, {
+        king = await King.new({
+            from: owner,
             value: web3.toWei(1, 'ether'),
             gas: block.gasLimit
         })
@@ -38,8 +39,8 @@ contract('King', async (accounts) => {
         )
         assert.deepStrictEqual(
             await king.king(), 
-            kingfactory.address,
-            "King's adderss should be kingfactory.address"
+            owner,
+            "King's adderss should be: " + owner
         )
  
         await kinghack.attack(king.address, {
@@ -57,12 +58,12 @@ contract('King', async (accounts) => {
         assert.deepStrictEqual(
             await king.king(), 
             kinghack.address,
-            "King adderss should be changed to kinghack address" 
+            "King adderss should be changed to:" + kinghack.address 
         )
         
     })
 
-    it("victim should change king", async () => {
+    it("victim cannot dethrone hacker as the King", async () => {
 
         let throwableTx
         try{
@@ -81,7 +82,7 @@ contract('King', async (accounts) => {
         assert.deepStrictEqual(
             await king.king(), 
             kinghack.address,
-            "King's king adderss should be not changed by victim and stay as kinghack.address"
+            "King's king adderss should be not changed by: " + victim + " and stay as: " + kinghack.address
         )
     })
 })
