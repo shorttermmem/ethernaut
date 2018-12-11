@@ -29,8 +29,8 @@ module.exports = {
     ropsten:  {
       provider: function() {
         return new HDWalletProvider(
-          process.env.WALLET_KEY, 
-          "https://https://ropsten.infura.io/v3/${process.env.API_KEY}")
+          process.env.HD_WALLET_MNEMONIC, 
+          "https://ropsten.infura.io/${process.env.INFURA_API_TOKEN}")
       },
       network_id: 3,
       gas: 4e6,    //make sure this gas allocation isn't over 4M, which is the max
