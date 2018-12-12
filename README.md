@@ -14,7 +14,7 @@
 - [ ] 5. Token
 - [ ] 6. Delegation
 - [ ] 7. Force
-- [ ] 8. Vault
+- [x] 8. Vault
 - [x] 9. King
 - [ ] 10. Re-entrancy
 - [ ] 11. Elevator
