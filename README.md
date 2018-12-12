@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/shorttermmem/ethernaut.svg?branch=master)](https://travis-ci.org/shorttermmem/ethernaut)
+[![Build Status](https://travis-ci.org/shorttermmem/ethernaut.svg?branch=staging)](https://travis-ci.org/shorttermmem/ethernaut)
 [![Build status](https://ci.appveyor.com/api/projects/status/el8km2bitpexanl0?svg=true)](https://ci.appveyor.com/project/shorttermmem/ethernaut)
 [![codecov](https://codecov.io/gh/shorttermmem/ethernaut/branch/master/graph/badge.svg)](https://codecov.io/gh/shorttermmem/ethernaut)
 
