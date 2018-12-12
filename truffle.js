@@ -1,10 +1,8 @@
 //https://truffleframework.com/docs/truffle/reference/configuration
+require('dotenv').config();
+
 const assert = require("assert")
 const HDWalletProvider = require("truffle-hdwallet-provider");
-
-require('dotenv').config({ path: require('path').join(__dirname, '.env') });
-assert(process.env.INFURA_API_TOKEN, 'missing INFURA_API_TOKEN in .env file');
-assert(process.env.HD_WALLET_MNEMONIC, 'missing HD_WALLET_MNEMONIC in .env file');
 
 module.exports = {
   //contracts_build_directory: "./build",
@@ -28,6 +26,9 @@ module.exports = {
     },
     ropsten:  {
       provider: function() {
+        assert(process.env.INFURA_API_TOKEN, 'missing INFURA_API_TOKEN in .env file');
+        assert(process.env.HD_WALLET_MNEMONIC, 'missing HD_WALLET_MNEMONIC in .env file');
+
         return new HDWalletProvider(
           process.env.HD_WALLET_MNEMONIC, 
           "https://ropsten.infura.io/${process.env.INFURA_API_TOKEN}")
