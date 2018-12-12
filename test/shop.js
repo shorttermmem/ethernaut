@@ -11,9 +11,14 @@ contract("Shop", () => {
         expect(isSold).to.equal(false);
     });
 
+    
     it("attacker should be able to buy item for a price that is less than 100", async () => {
         let shop = await Shop.deployed();
         let shopHack = await ShopHack.deployed();
+        let block = web3.eth.getBlock("latest");
+        
+        // solidity-coverage's additional gas costs are too large for victim contract's hardcoded gas values
+        if (process.env._.includes('solidity-coverage')) return;
 
         await shopHack.attack();
         let price = await shop.price.call();
@@ -21,4 +26,6 @@ contract("Shop", () => {
         expect(isSold).to.equal(true);
         expect(price.toNumber()).to.be.below(100);
     });
+
+
 });
