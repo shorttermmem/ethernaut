@@ -41,4 +41,4 @@ Install required dependencies.
 
 Run a specific test for the contract 'Basic' on the local development blockchain.
 
-`truffle test test/basic.js --network dev`
+`truffle test test/basic.test.js --network dev`
