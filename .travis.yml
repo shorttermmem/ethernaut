@@ -27,4 +27,4 @@ install:
 script:
   - ganache-cli &
   - truffle test --network ganache
-  - $(npm bin)/solidity-coverage
+  - npm run coverage && cat coverage/lcov.info | coveralls
