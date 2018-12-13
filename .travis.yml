@@ -27,4 +27,5 @@ install:
 script:
   - ganache-cli &
   - truffle test --network ganache
-  - npm run coverage && cat coverage/lcov.info | coveralls
+  - export SOLIDITY_COVERAGE=1 && npm run coverage && cat coverage/lcov.info | coveralls
+  - unset SOLIDITY_COVERAGE

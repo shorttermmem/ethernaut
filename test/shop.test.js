@@ -22,7 +22,7 @@ contract("Shop", () => {
 
         // Hack:
         // solidity-coverage's additional gas costs are too large for victim contract's hardcoded gas values
-        if (process.env.npm_lifecycle_script.includes('solidity-coverage')) {
+        if (process.env.SOLIDITY_COVERAGE) {
             try {
                 // Note: this is expected to fail under solidity-coverage's added gas costs
                 await shopHack.attack();
