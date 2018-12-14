@@ -6,8 +6,8 @@ contract("Shop", () => {
     let shopHack;
 
     before(async () => {
-        shop = await Shop.deployed();
-        shopHack = await ShopHack.deployed();
+        shop = await Shop.new();
+        shopHack = await ShopHack.new();
     });
 
     it("victim should start not sold with a price of 100", async () => {
@@ -25,14 +25,14 @@ contract("Shop", () => {
         if (process.env.SOLIDITY_COVERAGE) {
             try {
                 // Note: this is expected to fail under solidity-coverage's added gas costs
-                await shopHack.attack();
+                await shopHack.attack(shop.address);
             } catch(err) {
                 assert.strictEqual(err.message, "VM Exception while processing transaction: revert")
             }
             return;
         }
 
-        await shopHack.attack();
+        await shopHack.attack(shop.address);
         let price = await shop.price.call();
         let isSold = await shop.isSold.call();
 

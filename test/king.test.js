@@ -23,7 +23,7 @@ contract('King', async (accounts) => {
             value: web3.toWei(1, 'ether'),
             gas: block.gasLimit
         });
-        //utils.logWallet({owner}, owner);
+        utils.logWallet({owner}, owner);
 
         assert.equal(
             await king.prize(), 
@@ -33,7 +33,7 @@ contract('King', async (accounts) => {
         assert.deepStrictEqual(
             await king.king(), 
             owner,
-            "King's adderss should be: " + owner
+            "King's address should be: " + owner
         );
     });
 
@@ -44,7 +44,7 @@ contract('King', async (accounts) => {
             value: web3.toWei(1, 'ether'),
             gas: block.gasLimit
         });
-        //utils.logWallet({hacker}, hacker);
+        utils.logWallet({hacker}, hacker);
        
         assert.equal(
             await king.prize(), 
@@ -54,7 +54,7 @@ contract('King', async (accounts) => {
         assert.deepStrictEqual(
             await king.king(), 
             kinghack.address,
-            "King adderss should be changed to:" + kinghack.address 
+            "King address should be changed to:" + kinghack.address 
         );
                 
         let throwableTx;
@@ -69,12 +69,12 @@ contract('King', async (accounts) => {
             assert.strictEqual(err.message, "VM Exception while processing transaction: revert")
         }
         expect(throwableTx).to.be.undefined;
-        //utils.logWallet({victim}, victim);
+        utils.logWallet({victim}, victim);
       
         assert.deepStrictEqual(
             await king.king(), 
             kinghack.address,
-            "King's king adderss should be not changed by: " + victim + " and stay as: " + kinghack.address
+            "King's king address should be not changed by: " + victim + " and stay as: " + kinghack.address
         );
     });
 });

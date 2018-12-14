@@ -1,27 +1,24 @@
 const Telephone = artifacts.require("Telephone");
 const TelephoneHack = artifacts.require("TelephoneHack");
 
-
 contract("Telephone", (accounts) => {
     let telephone;
     let telephoneHack;
+    let originalOwner = accounts[0];
+    let attacker = accounts[1];
 
     before(async () => {
-        telephone = await Telephone.deployed();
-        telephoneHack = await TelephoneHack.deployed();
-    });
+        telephone = await Telephone.new({from: originalOwner});
+        telephoneHack = await TelephoneHack.new();
 
-    it("user should not be owner", async () => {
         let owner = await telephone.owner.call();
-        let originalOwner = accounts[0];
-        expect(owner).to.equal(originalOwner);
+        expect(owner).to.equal(originalOwner, "victim not initialized correctly");
     });
 
     it("attacker should be able to become owner", async () => {
-        let user = accounts[1];
-        await telephoneHack.changeOwner(user);
+        await telephoneHack.attack(telephone.address, attacker);
         
         let owner = await telephone.owner.call();
-        expect(owner).to.equal(user);
+        expect(owner).to.equal(attacker, "attacker did not become the owner of victim contract");
     });
 });

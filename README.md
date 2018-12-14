@@ -9,7 +9,7 @@
 - [ ] 0. Hello Ethernaut
 - [ ] 1. Fallback
 - [ ] 2. Fallout
-- [ ] 3. Coin Flip
+- [x] 3. Coin Flip
 - [x] 4. Telephone
 - [ ] 5. Token
 - [ ] 6. Delegation
