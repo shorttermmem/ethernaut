@@ -1,5 +1,8 @@
 //https://truffleframework.com/docs/truffle/reference/configuration
-let HDWalletProvider = require("truffle-hdwallet-provider");
+require('dotenv').config();
+
+const assert = require("assert")
+const HDWalletProvider = require("truffle-hdwallet-provider");
 
 module.exports = {
   //contracts_build_directory: "./build",
@@ -23,18 +26,17 @@ module.exports = {
     },
     ropsten:  {
       provider: function() {
+        assert(process.env.INFURA_API_TOKEN, 'missing INFURA_API_TOKEN in .env file');
+        assert(process.env.HD_WALLET_MNEMONIC, 'missing HD_WALLET_MNEMONIC in .env file');
+
         return new HDWalletProvider(
-          'club vocal bronze hair vocal card remember seek web half lobster outside', 
-          "https://ropsten.infura.io/db29611c34844e2197634a44dbac1344")
+          process.env.HD_WALLET_MNEMONIC, 
+          "https://ropsten.infura.io/${process.env.INFURA_API_TOKEN}")
       },
       network_id: 3,
-      gas: 3000000,    //make sure this gas allocation isn't over 4M, which is the max
-      gasPrice: 100000000000
+      gas: 4e6,    //make sure this gas allocation isn't over 4M, which is the max
       // optional config values:
       // from - default address to use for any transaction Truffle makes during migrations
-      // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
-      //          - function that returns a web3 provider instance (see below.)
-      //          - if specified, host and port are ignored.
     }
   },
   solc: {

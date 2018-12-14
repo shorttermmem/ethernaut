@@ -14,12 +14,12 @@ Staging status:
 - [ ] 0. Hello Ethernaut
 - [ ] 1. Fallback
 - [ ] 2. Fallout
-- [ ] 3. Coin Flip
+- [x] 3. Coin Flip
 - [x] 4. Telephone
 - [ ] 5. Token
 - [ ] 6. Delegation
 - [ ] 7. Force
-- [ ] 8. Vault
+- [x] 8. Vault
 - [x] 9. King
 - [ ] 10. Re-entrancy
 - [ ] 11. Elevator
@@ -46,4 +46,4 @@ Install required dependencies.
 
 Run a specific test for the contract 'Basic' on the local development blockchain.
 
-`truffle test test/basic.js --network dev`
+`truffle test test/basic.test.js --network dev`
