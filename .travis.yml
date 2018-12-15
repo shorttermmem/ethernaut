@@ -1,5 +1,13 @@
 language: node_js
 
+notifications:
+  email:
+    recipients:
+      - roman.h1234@gmail.com
+      # - fangh@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
+
 sudo: required
 
 node_js:
