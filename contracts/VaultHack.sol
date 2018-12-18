@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import "levels/Vault.sol";
+import "./levels/Vault.sol";
 
 contract VaultHack {
     // malicious attacker must pass in password because contracts

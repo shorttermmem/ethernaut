@@ -1,7 +1,7 @@
 pragma solidity ^0.4.18;
 
 import "zeppelin/contracts/ownership/Ownable.sol";
-import "levels/King.sol";
+import "./levels/King.sol";
 
 contract KingHack {
     address public mywallet;

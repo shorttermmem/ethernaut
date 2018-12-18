@@ -1,6 +1,6 @@
 pragma solidity 0.4.24;
 
-import "levels/Shop.sol";
+import "./levels/Shop.sol";
 
 contract ShopHack is Buyer {
 

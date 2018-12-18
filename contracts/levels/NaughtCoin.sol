@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import 'zeppelin/contracts/token/ERC20/StandardToken.sol';
+import 'zeppelin/contracts/token/StandardToken.sol';
 
  contract NaughtCoin is StandardToken {
 
@@ -13,7 +13,7 @@ import 'zeppelin/contracts/token/ERC20/StandardToken.sol';
 
   function NaughtCoin(address _player) public {
     player = _player;
-    totalSupply_ = INITIAL_SUPPLY;
+    totalSupply = INITIAL_SUPPLY;
     balances[player] = INITIAL_SUPPLY;
     Transfer(0x0, player, INITIAL_SUPPLY);
   }

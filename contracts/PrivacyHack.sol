@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import "levels/Privacy.sol";
+import "./levels/Privacy.sol";
 
 contract PrivacyHack {
     // malicious attacker must pass in key because contracts

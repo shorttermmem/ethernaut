@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-import "levels/Fallback.sol";
+import "./levels/Fallback.sol";
 
 contract FallbackHack{
 
