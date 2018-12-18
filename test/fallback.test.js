@@ -2,14 +2,11 @@
 
 const utils = require('./common/utils');
 const {assert, expect} = require('chai');
-const FallbackHack = artifacts.require("FallbackHack");
 const Fallback = artifacts.require("Fallback");
 
 contract('Fallback', async (accounts) => {
     
-    let fallbackhack;
     let fallback;
-    const block = web3.eth.getBlock("latest");
     
     const victim = accounts[1];
     const hacker = accounts[2];
@@ -23,8 +20,6 @@ contract('Fallback', async (accounts) => {
 
         let balance = await fallback.getContribution({from: victim});
         expect(balance.toNumber()).to.equal(1e+21);
-
-        //fallbackhack = await FallbackHack.new();
     });
 
     it("Owner should be changed to attacker", async () => {
