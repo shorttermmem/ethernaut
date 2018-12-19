@@ -8,7 +8,7 @@
 ### Status
 - [ ] 0. Hello Ethernaut
 - [x] 1. Fallback
-- [ ] 2. Fallout
+- [x] 2. Fallout
 - [x] 3. Coin Flip
 - [x] 4. Telephone
 - [x] 5. Token

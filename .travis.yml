@@ -4,7 +4,7 @@ notifications:
   email:
     recipients:
       - roman.h1234@gmail.com
-      # - fangh@gmail.com
+      # - mike@gmail.com
     on_success: always # default: change
     on_failure: always # default: always
 
