@@ -18,7 +18,7 @@ Staging status:
 - [x] 4. Telephone
 - [x] 5. Token
 - [ ] 6. Delegation
-- [ ] 7. Force
+- [x] 7. Force
 - [x] 8. Vault
 - [x] 9. King
 - [ ] 10. Re-entrancy
