@@ -1,7 +1,7 @@
 const Delegate = artifacts.require("Delegate");
 const Delegation = artifacts.require("Delegation");
 
-contract("Delegate", (accounts) => {
+contract("Delegation", (accounts) => {
     let delegate;
     let originalOwner = accounts[0];
     let attacker = accounts[1];

@@ -7,11 +7,11 @@
 - Ethernaut is a Capture the Flag (CTF) type competition where you must hack victim solidity contracts provided by (https://ethernaut.zeppelin.solutions/).
 ### Status
 - [ ] 0. Hello Ethernaut
-- [ ] 1. Fallback
+- [x] 1. Fallback
 - [ ] 2. Fallout
 - [x] 3. Coin Flip
 - [x] 4. Telephone
-- [ ] 5. Token
+- [x] 5. Token
 - [x] 6. Delegation
 - [ ] 7. Force
 - [x] 8. Vault
