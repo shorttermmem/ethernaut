@@ -14,7 +14,7 @@ shallow_clone: true
 test_script:
   - node --version
   - npm --version
-  - ganache-cli &
+  - Start-Process -NoNewWindow ganache-cli
   - truffle test --network ganache
   - $(npm bin)/solidity-coverage
 cache:
