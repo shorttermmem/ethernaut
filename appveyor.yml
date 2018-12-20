@@ -1,5 +1,5 @@
 environment:
-  APPVEYOR_RDP_PASSWORD: wowamazing
+  APPVEYOR_RDP_PASSWORD: wowamazing42
   matrix:
     - nodejs_version: '10'
 
