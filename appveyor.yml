@@ -1,6 +1,11 @@
 environment:
+  APPVEYOR_RDP_PASSWORD: wowamazing
   matrix:
     - nodejs_version: '10'
+
+init:
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
 install:
   - ps: Install-Product node $env:nodejs_version
   - npm install --global npm@latest
@@ -16,6 +21,9 @@ test_script:
   - npm --version
   - ps: Start-Process ganache-cli -WindowStyle Hidden
   - truffle test --network ganache
+  - dir
+  - ps: dir
+  - ./node_modules/.bin/solidity-coverage
   - $(npm bin)/solidity-coverage
 cache:
   - '%APPDATA%\npm-cache'
