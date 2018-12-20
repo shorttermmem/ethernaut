@@ -1,5 +1,5 @@
 environment:
-  APPVEYOR_RDP_PASSWORD: wowamazing42
+  APPVEYOR_RDP_PASSWORD: Wowamazing42
   matrix:
     - nodejs_version: '10'
 
@@ -22,8 +22,6 @@ test_script:
   - ps: Start-Process ganache-cli -WindowStyle Hidden
   - truffle test --network ganache
   - dir
-  - ps: dir
   - ./node_modules/.bin/solidity-coverage
-  - $(npm bin)/solidity-coverage
 cache:
   - '%APPDATA%\npm-cache'
