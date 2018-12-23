@@ -16,7 +16,7 @@
 - [ ] 7. Force
 - [x] 8. Vault
 - [x] 9. King
-- [ ] 10. Re-entrancy
+- [x] 10. Re-entrancy
 - [ ] 11. Elevator
 - [x] 12. Privacy
 - [ ] 13. Gatekeeper One
