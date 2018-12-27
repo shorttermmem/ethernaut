@@ -69,3 +69,6 @@ typings/
 
 # truffle
 build/
+
+# debug configurations
+launch.json

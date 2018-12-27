@@ -20,7 +20,7 @@
 - [ ] 11. Elevator
 - [x] 12. Privacy
 - [ ] 13. Gatekeeper One
-- [ ] 14. Gatekeeper Two
+- [x] 14. Gatekeeper Two
 - [ ] 15. Naught Coin
 - [ ] 16. Preservation
 - [ ] 17. Locked

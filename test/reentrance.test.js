@@ -1,6 +1,3 @@
-// 'use strict'
-
-// const {assert} = require('chai');
 const ReentranceFactory = artifacts.require('ReentranceFactory');
 const ReentranceHack = artifacts.require('ReentranceHack');
 const TestLevel = artifacts.require('TestLevel'); 
@@ -13,7 +10,6 @@ contract('Reentrance', async (accounts) => {
     let instanceHack;
     
     const initialBalance = parseInt(web3.toWei(1, 'ether'), 10);
-    const owner = accounts[1];
     const hacker = accounts[2];
 
     before( async () => {
