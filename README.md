@@ -2,7 +2,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/el8km2bitpexanl0?svg=true)](https://ci.appveyor.com/project/shorttermmem/ethernaut)
 [![codecov](https://codecov.io/gh/shorttermmem/ethernaut/branch/master/graph/badge.svg)](https://codecov.io/gh/shorttermmem/ethernaut)
 
-# ethernaut - Learn Ethereum Smart Contracts by Hacking Them
+# Ethernaut - Learn Ethereum Smart Contracts by Hacking
 - Sample solutions and automated tests for all ethernaut levels using the truffle framework (https://truffleframework.com/). 
 - Ethernaut is a Capture the Flag (CTF) type competition where you must hack victim solidity contracts provided by (https://ethernaut.zeppelin.solutions/).
 ### Status
