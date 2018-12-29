@@ -13,11 +13,11 @@
 - [x] 4. Telephone
 - [x] 5. Token
 - [x] 6. Delegation
-- [ ] 7. Force
+- [x] 7. Force
 - [x] 8. Vault
 - [x] 9. King
 - [x] 10. Re-entrancy
-- [ ] 11. Elevator
+- [x] 11. Elevator
 - [x] 12. Privacy
 - [ ] 13. Gatekeeper One
 - [x] 14. Gatekeeper Two
