@@ -22,7 +22,7 @@
 - [ ] 13. Gatekeeper One
 - [x] 14. Gatekeeper Two
 - [ ] 15. Naught Coin
-- [ ] 16. Preservation
+- [x] 16. Preservation
 - [ ] 17. Locked
 - [ ] 18. Recovery
 - [ ] 19. MagicNumber
