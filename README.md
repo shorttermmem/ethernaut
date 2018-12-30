@@ -23,7 +23,7 @@
 - [x] 14. Gatekeeper Two
 - [ ] 15. Naught Coin
 - [x] 16. Preservation
-- [ ] 17. Locked
+- [x] 17. Locked
 - [ ] 18. Recovery
 - [ ] 19. MagicNumber
 - [ ] 20. Alien Codex
