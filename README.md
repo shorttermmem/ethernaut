@@ -26,7 +26,7 @@
 - [x] 17. Locked
 - [ ] 18. Recovery
 - [ ] 19. MagicNumber
-- [ ] 20. Alien Codex
+- [x] 20. Alien Codex
 - [ ] 21. Denial
 - [x] 22. Shop
 

@@ -16,8 +16,8 @@ contract("Delegation", (accounts) => {
     });
 
     it("attacker should be able to take ownership", async () => {
-        let pwnSigBytes4 = web3.sha3("pwn()").substring(0, 10);
-        await delegation.sendTransaction({from: attacker, data: pwnSigBytes4});
+        let pwnMethodID = web3.sha3("pwn()").substring(0, 10);
+        await delegation.sendTransaction({from: attacker, data: pwnMethodID});
 
         let owner = await delegation.owner.call();
         expect(owner).to.equal(attacker, "attacker could not take ownership of victim contract");
