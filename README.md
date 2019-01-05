@@ -7,31 +7,31 @@ Master status:
 Staging status:
 [![Build Status](https://travis-ci.org/shorttermmem/ethernaut.svg?branch=staging)](https://travis-ci.org/shorttermmem/ethernaut)
 
-# ethernaut
+# Ethernaut - Learn Ethereum Smart Contracts by Hacking
 - Sample solutions and automated tests for all ethernaut levels using the truffle framework (https://truffleframework.com/). 
 - Ethernaut is a Capture the Flag (CTF) type competition where you must hack victim solidity contracts provided by (https://ethernaut.zeppelin.solutions/).
 ### Status
-- [ ] 0. Hello Ethernaut
+- [x] 0. Hello Ethernaut
 - [x] 1. Fallback
-- [ ] 2. Fallout
+- [x] 2. Fallout
 - [x] 3. Coin Flip
 - [x] 4. Telephone
 - [x] 5. Token
-- [ ] 6. Delegation
+- [x] 6. Delegation
 - [x] 7. Force
 - [x] 8. Vault
 - [x] 9. King
-- [ ] 10. Re-entrancy
-- [ ] 11. Elevator
+- [x] 10. Re-entrancy
+- [x] 11. Elevator
 - [x] 12. Privacy
 - [ ] 13. Gatekeeper One
-- [ ] 14. Gatekeeper Two
+- [x] 14. Gatekeeper Two
 - [ ] 15. Naught Coin
-- [ ] 16. Preservation
-- [ ] 17. Locked
+- [x] 16. Preservation
+- [x] 17. Locked
 - [ ] 18. Recovery
 - [ ] 19. MagicNumber
-- [ ] 20. Alien Codex
+- [x] 20. Alien Codex
 - [ ] 21. Denial
 - [x] 22. Shop
 

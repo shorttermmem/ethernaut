@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-import "levels/Basic.sol";
+import "./levels/Basic.sol";
 
 contract BasicHack {
     Basic public target;

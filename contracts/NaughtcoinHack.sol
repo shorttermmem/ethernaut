@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import '../installed_contracts/zeppelin/contracts/token/StandardToken.sol';
+import 'zeppelin/contracts/token/StandardToken.sol';
 
  contract NaughtCoin is StandardToken {
      

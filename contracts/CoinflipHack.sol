@@ -1,6 +1,6 @@
 pragma solidity ^0.4.18;
 
-import "levels/CoinFlip.sol";
+import "./levels/CoinFlip.sol";
 
 contract CoinFlipHack {
   uint256 lastHash;
