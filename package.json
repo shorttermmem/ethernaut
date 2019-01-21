@@ -30,7 +30,6 @@
     "coveralls": "^3.0.2",
     "solidity-coverage": "^0.5.11",
     "solium": "^1.1.8",
-    "truffle-core": "^4.1.14",
     "webpack": "^4.27.1"
   }
 }
